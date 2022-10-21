@@ -2,22 +2,29 @@ import config from "../conf/index.js";
 
 async function init() {
 <<<<<<< HEAD
+<<<<<<< HEAD
   let cities = await fetchCities();
 
   // const loadAnim = document.getElementById('load');
   // loadAnim.remove();
   
 =======
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
   //Fetches list of all cities along with their images and description
   let cities = await fetchCities();
 
   //Updates the DOM with the cities
+<<<<<<< HEAD
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
   cities.forEach((key) => {
     addCityToDOM(key.id, key.city, key.description, key.image);
   });
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 async function fetchCities() {
   try {
@@ -52,6 +59,8 @@ function addCityToDOM(id, city, description, image) {
 
 export { init, fetchCities, addCityToDOM };
 =======
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 //Implementation of fetch call
 async function fetchCities() {
   // TODO: MODULE_CITIES
@@ -67,4 +76,7 @@ function addCityToDOM(id, city, description, image) {
 }
 
 export { init, fetchCities, addCityToDOM };
+<<<<<<< HEAD
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f

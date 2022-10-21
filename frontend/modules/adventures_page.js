@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import config from "../conf/index.js";
 
 function getCityFromURL(search) {
@@ -17,6 +18,8 @@ async function fetchAdventures(city) {
     return null;
   }
 =======
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 
 import config from "../conf/index.js";
 
@@ -32,6 +35,9 @@ async function fetchAdventures(city) {
   // TODO: MODULE_ADVENTURES
   // 1. Fetch adventures using the Backend API and return the data
 
+<<<<<<< HEAD
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 }
 
@@ -39,6 +45,7 @@ async function fetchAdventures(city) {
 function addAdventureToDOM(adventures) {
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
+<<<<<<< HEAD
 <<<<<<< HEAD
   let parent = document.getElementById("data");
   parent.innerHTML = ``; // to clear pre-existing data if exists any
@@ -76,6 +83,9 @@ function addAdventureToDOM(adventures) {
 =======
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 }
 
 //Implementation of filtering by duration which takes in a list of adventures, the lower bound and upper bound of duration and returns a filtered list of adventures.
@@ -83,10 +93,14 @@ function filterByDuration(list, low, high) {
   // TODO: MODULE_FILTERS
   // 1. Filter adventures based on Duration and return filtered list
 <<<<<<< HEAD
+<<<<<<< HEAD
   let durationFilteredList = list.filter((elem) => {
     return elem.duration >= low && elem.duration <= high;
   });
   return durationFilteredList;
+=======
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
@@ -97,10 +111,14 @@ function filterByCategory(list, categoryList) {
   // TODO: MODULE_FILTERS
   // 1. Filter adventures based on their Category and return filtered list
 <<<<<<< HEAD
+<<<<<<< HEAD
   let categoryFilteredList = list.filter((elem) => {
     return categoryList.includes(elem.category);
   });
   return categoryFilteredList;
+=======
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
@@ -118,6 +136,7 @@ function filterFunction(list, filters) {
   // 1. Handle the 3 cases detailed in the comments above and return the filtered list of adventures
   // 2. Depending on which filters are needed, invoke the filterByDuration() and/or filterByCategory() methods
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   // Checking for the Duration option
   if (filters.duration !== "") {
@@ -137,6 +156,10 @@ function filterFunction(list, filters) {
 
   // Place holder for functionality to work in the Stubs
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
+
+  // Place holder for functionality to work in the Stubs
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
   return list;
 }
 
@@ -145,7 +168,11 @@ function saveFiltersToLocalStorage(filters) {
   // TODO: MODULE_FILTERS
   // 1. Store the filters as a String to localStorage
 <<<<<<< HEAD
+<<<<<<< HEAD
   localStorage.setItem("filters", JSON.stringify(filters));
+=======
+
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
@@ -157,13 +184,19 @@ function getFiltersFromLocalStorage() {
   // TODO: MODULE_FILTERS
   // 1. Get the filters from localStorage and return String read as an object
 <<<<<<< HEAD
+<<<<<<< HEAD
   let filterString = localStorage.getItem("filters");
   return JSON.parse(filterString);
 =======
+=======
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 
 
   // Place holder for functionality to work in the Stubs
   return null;
+<<<<<<< HEAD
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
+=======
 >>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 }
 
@@ -174,6 +207,7 @@ function getFiltersFromLocalStorage() {
 function generateFilterPillsAndUpdateDOM(filters) {
   // TODO: MODULE_FILTERS
   // 1. Use the filters given as input, update the Duration Filter value and Generate Category Pills
+<<<<<<< HEAD
 <<<<<<< HEAD
   // console.log("filters:", filters);
 
@@ -202,6 +236,10 @@ function generateFilterPillsAndUpdateDOM(filters) {
   });
 }
 
+=======
+
+}
+>>>>>>> 04a35f749ba52a552d9f517016c4c27857cb4e5f
 =======
 
 }
