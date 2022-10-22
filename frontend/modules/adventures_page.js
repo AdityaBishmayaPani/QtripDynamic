@@ -30,42 +30,38 @@ async function fetchAdventures(city) {
 function addAdventureToDOM(adventures) {
   // TODO: MODULE_ADVENTURES
   // 1. Populate the Adventure Cards and insert those details into the DOM
-  adventures.forEach((adventure) => {
-    let id = adventure.id;
-    let name = adventure.name;
-    let category = adventure.category;
-    let costPerHead = adventure.costPerHead;
-    let duration = adventure.duration;
-    let image = adventure.image;
+  let parent = document.getElementById('data');
+  parent.innerHTML = ``; // to clear pre-existing data if exists any
+  let mainActivityDiv = document.createElement('div');
+  mainActivityDiv.classList.add('row', 'container-fluid', 'mx-auto');
 
-    let dataElem = document.getElementById("data");
-    let newDiv = document.createElement("div");
-    newDiv.className = "col-6 col-lg-3 mb-4 position-relative";
-    newDiv.innerHTML = `
-  <a href="detail/?adventure=${id}" id="${id}">
-    
-    <div class="category-banner">${category}</div>
-    
-    <div class="card activity-card">
-        
-      <img src="${image}" alt="${name}">
-
-      <div class="activity-card-text text-md-center w-100 mt-3">
-              <div class="d-block d-md-flex justify-content-between flex-wrap ps-3 pe-3">
-                <h5 class="text-left">${name}</h5>
-                <p>₹ ${costPerHead}</p>
-              </div>
-                <div class="d-block d-md-flex justify-content-between flex-wrap ps-3 pe-3">
-                <h5 class="text-left">Duration</h5>
-                <p>${duration} Hours</p>
-              </div>
+  adventures.forEach((activity) => {
+    const { id, name, costPerHead, image, duration, category } = activity;
+    let insideActivityDiv = document.createElement('div');
+    insideActivityDiv.classList.add("col-lg-3", "col-12", "col-sm-6", "mt-4");
+    insideActivityDiv.innerHTML = `
+      <a href="detail/?adventure=${id}" id="${id}">
+        <div class="card activity-card">
+          <img src="${image}" alt="Adventure Activity Card">
+          <div class="adventure-detail-card">
+            <div class="d-flex justify-content-between align-items-evenly">
+              <h5>${name}</h5>
+              <p style="font-weight: 400;">₹${costPerHead}</p>
             </div>
-        
-    </div>   
-  </a>
-  `;
-    dataElem.appendChild(newDiv);
+            <div class="d-flex justify-content-between align-items-evenly">
+              <h5>Duration</h5>
+              <p style="font-weight: 400;">${duration}Hours</p>
+            </div>
+          </div>
+          <div class="category-banner">
+            ${category}
+          </div>
+        </div>
+      </a>
+    `
+    mainActivityDiv.appendChild(insideActivityDiv);
   });
+  parent.appendChild(mainActivityDiv);
 }
 
 //Implementation of filtering by duration which takes in a list of adventures, the lower bound and upper bound of duration and returns a filtered list of adventures.
