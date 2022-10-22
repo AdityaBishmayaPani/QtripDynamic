@@ -17,7 +17,7 @@ async function fetchCities() {
     let citiesData = await response.json();
     return citiesData;
   } catch (error) {
-    console.log(`Error is : ${error}`);
+    
     return null;
   }
 }
