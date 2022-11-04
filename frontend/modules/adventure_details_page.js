@@ -16,8 +16,8 @@ async function fetchAdventureDetails(adventureId) {
     let res = await fetch(url);
     const result = await res.json();
 
-    const loadAnim = document.getElementById("load");
-    loadAnim.remove();
+    // const loadAnim = document.getElementById("load");
+    // loadAnim.remove();
 
     return result;
   } catch (error) {
